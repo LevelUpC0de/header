@@ -48,21 +48,21 @@ function activate(context) {
         ];
 
         let header = [];
-        header.push("/*******************************************************************************/");
-        header.push("/*                                                                             */");
-        header.push("/*                                                                             */");
+        header.push("# /*******************************************************************************/");
+        header.push("# /*                                                                             */");
+        header.push("# /*                                                                             */");
         ascii.forEach(line => {
             let content = line.length > WIDTH - 4 ? line.slice(0, WIDTH - 4) : line;
             let padding = ' '.repeat(Math.max(0, WIDTH - 4 - content.length));
             header.push(`/* ${content}${padding} */`);
         });
-        header.push("/*                                                                             */");
+        header.push("# /*                                                                             */");
         header.push(formatLine("File:", fileName));
         header.push(formatLine("By:", username));
         header.push(formatLine("Created:", timestamp));
         header.push(formatLine("Updated:", timestamp));
-        header.push("/*                                                                             */");
-        header.push("/*******************************************************************************/\n");
+        header.push("# /*                                                                             */");
+        header.push("# /*******************************************************************************/\n");
 
         editor.edit(editBuilder => {
             editBuilder.insert(new vscode.Position(0, 0), header.join('\n'));
