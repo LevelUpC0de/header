@@ -1,33 +1,38 @@
 {
-  "name": "header",
-  "displayName": "header",
-  "description": "header levelupcode",
+  "name": "levelupcode-header",
+  "displayName": "LevelUpCode Header",
+  "description": "Insère un header LevelUpCode avec ASCII et pseudo dynamique",
   "version": "0.0.1",
+  "publisher": "Nivmizz7", 
   "engines": {
-    "vscode": "^1.104.0"
+    "vscode": "^1.80.0"
   },
-  "categories": [
-    "Other"
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:levelupcode.insertHeader",
+    "onCommand:levelupcode.changeUsername"
   ],
-  "activationEvents": [],
-  "main": "./extension.js",
+  "main": "extension.js",
   "contributes": {
-    "commands": [{
-      "command": "header.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "levelupcode.insertHeader",
+        "title": "Insert LevelUpCode Header"
+      },
+      {
+        "command": "levelupcode.changeUsername",
+        "title": "Change LevelUpCode Username"
+      }
+    ],
+    "configuration": {
+      "properties": {
+        "levelupcode.username": {
+          "type": "string",
+          "default": "",
+          "description": "Pseudo à utiliser dans le header"
+        }
+      }
+    }
   },
-  "scripts": {
-    "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "vscode-test"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.104.0",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
-    "eslint": "^9.34.0",
-    "@vscode/test-cli": "^0.0.11",
-    "@vscode/test-electron": "^2.5.2"
-  }
+  "dependencies": {}
 }
