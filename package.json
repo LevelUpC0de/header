@@ -10,7 +10,6 @@
   "categories": ["Other"],
   "activationEvents": [
     "onCommand:levelupcode.insertHeader",
-    "onCommand:levelupcode.changeUsername"
   ],
   "main": "extension.js",
   "contributes": {
