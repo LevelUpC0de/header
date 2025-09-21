@@ -1,10 +1,7 @@
-.vscode/**
-.vscode-test/**
-test/**
+node_modules
+.vscode
+.git
 .gitignore
-.yarnrc
-vsc-extension-quickstart.md
-**/jsconfig.json
-**/*.map
-**/eslint.config.mjs
-**/.vscode-test.*
+npm-debug.log
+*.ts
+*.map

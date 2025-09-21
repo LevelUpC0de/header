@@ -3,13 +3,14 @@
   "displayName": "LevelUpCode Header",
   "description": "Insère un header LevelUpCode avec ASCII et pseudo dynamique",
   "version": "0.0.1",
-  "publisher": "Nivmizz7", 
+  "publisher": "Nivmizz7",
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": ["Other"],
   "activationEvents": [
     "onCommand:levelupcode.insertHeader",
+    "onCommand:levelupcode.changeUsername"
   ],
   "main": "extension.js",
   "contributes": {
@@ -33,9 +34,9 @@
       }
     }
   },
-  "dependencies": {},
   "repository": {
-  "type": "git",
-  "url": "https://github.com/Nivmizz7/header.git"
-  }
+    "type": "git",
+    "url": "https://github.com/Nivmizz7/levelupcode-header.git"
+  },
+  "dependencies": {}
 }
