@@ -2,7 +2,7 @@
   "name": "levelupcode-header",
   "displayName": "LevelUpCode Header",
   "description": "Insère un header LevelUpCode avec ASCII et pseudo dynamique",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "Nivmizz7",
   "engines": {
     "vscode": "^1.80.0"
