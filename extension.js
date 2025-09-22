@@ -87,7 +87,19 @@ function activate(context) {
 
         const fileName = editor.document.fileName.split('/').pop();
         const now = new Date();
-        const timestamp = now.toISOString().replace('T', ' ').split('.')[0];
+        const options = {
+            timeZone: 'Europe/Paris',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        };
+
+        const formatter = new Intl.DateTimeFormat('fr-FR', options);
+        const timestamp = formatter.format(now).replace(',', '');
 
         const ascii = [
             " ▄                           ▀▀█    ▄    ▄          ▄▄▄             █        ",
