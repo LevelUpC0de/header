@@ -11,3 +11,5 @@ Cette extension VS Code permet d’insérer un **header LevelUpCode** avec :
 
 - **Insert LevelUpCode Header** : insère le header dans le fichier actif  
 - **Change LevelUpCode Username** : change le pseudo utilisé pour tous les headers futurs
+
+V0.0.5
